@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 text-center">
+
+            <!-- Abdulai Turay -->
+            <h2 class="text-uppercase">{{title()}}</h2> <br>
+
+            <!--Using Signal Values-->
+            <input class="form-control" type="number" [(ngModel)]="firstNumber" #fN="ngModel" required> <br>
+            <small class="text-danger" *ngIf="fN.invalid && fN.touched">enter first number</small>
+            <br> <br>
+            <input class="form-control" type="number" [(ngModel)]="secondNumber" #sN="ngModel" required> <br>
+            <small class="text-danger" *ngIf="sN.invalid && sN.touched">enter first number</small>
+
+            <button class="btn btn-primary me-2" (click)="add()">Add</button>
+
+            <button class="btn btn-secondary me-2" (click)="subtract()">Subtract</button>
+
+            <button class="btn btn-warning me-2" (click)="divide()">Divide</button>
+
+            <button class="btn btn-success" (click)="multiply()">Multiple</button> <br> <br>
+
+            <h2>
+                <p class="text-success text-uppercase">Result: {{result()}}</p>
+            </h2>
+            <br>
+
+            <button class="btn btn-success me-2" (click)="increment()">Increment</button>
+
+            <button class="btn btn-danger" (click)="decrement()">Decrement</button> <br> <br>
+
+            <button class="btn btn-warning" (click)="clearInputField()">Clear</button> <br> <br>
+
+            <!-- Searching Workers -->
+
+            <h3 class="text-uppercase text-success">Search worker</h3>
+            <input class="form-control" [(ngModel)]="filterName" placeholder="Filter by name"> <br>
+            <input class="form-control" [(ngModel)]="filterSurname" placeholder="Filter by surname"> <br>
+            <table class="table table-striped table-brodered table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                    </tr>
+
+                </thead>
+                <tbody *ngFor="let worker of filteredWorkers()">
+                    <tr>
+                        <td>{{worker.id}}</td>
+                        <td>{{worker.name}}</td>
+                        <td>{{worker.surname}}</td>
+                        <td>{{worker.age}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            
+
+            <!-- Adding new worker -->
+            <h3 class="text-uppercase text-primary">Add a new worker</h3>
+            <input class="form-control" [(ngModel)]="newId" type="number" placeholder="ID"> <br>
+            <input class="form-control" [(ngModel)]="newName" placeholder="Name"> <br>
+            <input class="form-control" [(ngModel)]="newSurname" placeholder="Surname"> <br>
+            <input class="form-control" [(ngModel)]="newAge" type="number" placeholder="Age"> <br>
+            <button class="btn btn-success" (click)="addWorker()">Add Worker</button>
+
+
+
+        </div>
+    </div>
+</div>

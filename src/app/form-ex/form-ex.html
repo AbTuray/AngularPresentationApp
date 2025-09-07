@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <form class="form-group" #regForm="ngForm" (ngSubmit)="submitForm(regForm)" novalidate>
+
+                <!-- Firstname -->
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" required
+                        [(ngModel)]="user.firstname" #fname="ngModel">
+                    <small *ngIf="fname.invalid && fname.touched" class="text-danger">First name is required.</small>
+                </div>
+
+                <!-- Lastname -->
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" required
+                        [(ngModel)]="user.lastname" #lname="ngModel">
+                    <small *ngIf="lname.invalid && lname.touched" class="text-danger">Last name is required.</small>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required email
+                        [(ngModel)]="user.email" #email="ngModel">
+                    <small *ngIf="email.invalid && email.touched" class="text-danger"> Please enter a valid email.</small>
+                </div>
+
+                <!-- Phone -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required pattern="[0-9]{9}"
+                        [(ngModel)]="user.phone" #phone="ngModel">
+                    <small *ngIf="phone.invalid && phone.touched" class="text-danger">Please enter a valid 10-digit phone number.</small>
+                </div>
+
+                <!-- Select Course -->
+                <div class="mb-3">
+                    <label for="course" class="form-label">Select Course</label>
+                    <select id="course" name="course" class="form-select" required [(ngModel)]="user.course"
+                        #course="ngModel">
+                        <option value="" disabled selected>Select a course</option>
+                        <option *ngFor="let course of courses" [value]="course">{{ course }}</option>
+                    </select>
+                    <small *ngIf="course.invalid && course.touched" class="text-danger">Please select a course.</small>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary" [disabled]="regForm.invalid">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>

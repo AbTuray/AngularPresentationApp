@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 text-center">
+            <!-- String Interpolation -->
+            <h1>Data Binding</h1>
+            <h3>This is, {{title1}}</h3> <br>
+
+
+
+            <!-- Property Binding and Two-way binding -->
+            <label class="form-label">First Input</label> <br>
+            <span> <input class="form-control" [type]="firstInput" [(ngModel)]="entered"> </span> <br>
+            <h4 class="text-primary">You typed: {{entered}}</h4>
+
+            <label class="form-label">Enter First Number</label> <br>
+            <span> <input class="form-control" type="number" [(ngModel)]="num1"> </span> <br>
+
+            <label class="form-label">Enter Second Number</label> <br>
+            <span> <input class="form-control" type="number" [(ngModel)]="num2"> </span>
+            <br> <br>
+            <!-- Event Binding -->
+            <p>
+                <button class="btn btn-primary" (click)="add()">ADD</button>
+                <br> <br>
+                <span>
+                    <button class="btn btn-success" (click)="increment()">INCREMENT</button> <br> <br>
+                    <h3>The Result of Event Binding: {{result}}</h3> <br>
+                    <button class="btn btn-danger" (click)="decrement()">DECREMENT</button>
+                </span>
+            </p>
+
+
+        </div>
+
+    </div>
+</div>
