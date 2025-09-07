@@ -5,6 +5,7 @@
             <button class="btn btn-primary" (click)="toggleList()">{{showList ? "Hide Student" : "Show
                 Student"}}</button>
             <br> <br>
+            // structural directive
             <table *ngIf="showList" class="table table-striped table-brodered table-hover">
                 <thead>
                     <tr>
@@ -16,6 +17,7 @@
 
                 </thead>
                 <tbody *ngFor="let students of currentStudent">
+                    // string interpolation and pipes
                     <tr>
                         <td>{{students.id}}</td>
                         <td>{{students.firstName | uppercase}}</td>
@@ -59,8 +61,8 @@
                 </li>
             </ul> <br>
             <h3 class="text-uppercase">Using Custome Pipes</h3>
-            <p class="text-uppercase text-primary">Price in USD: {{ 1500 | currencyConverter:'$':2:'en-US' }}</p>
-            <p class="text-uppercase text-danger">Price in Leones: {{ 1500 | currencyConverter:'Le':2:'en-SL' }}</p>
+            <p class="text-uppercase text-primary">Price in USD: {{ 1500 | currencyConverter:'$':4:'en-US' }}</p>
+            <p class="text-uppercase text-danger">Price in Leones: {{ 1500 | currencyConverter:'Le':4:'en-SL' }}</p>
 
 
         </div>

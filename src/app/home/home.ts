@@ -23,7 +23,7 @@ export class Home {
 
     appService = inject(AppService);
 
-    presentersList = this.appService.student;
+    presentersList = this.appService.students;
 
     showList = false;
   //Function to toggle the button

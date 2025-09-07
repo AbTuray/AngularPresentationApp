@@ -10,12 +10,13 @@ import { CurrencyConverterPipe } from '../currency-converter-pipe';
   styleUrl: './directive-ex.css'
 })
 export class DirectiveEx {
+  //GIFTY HEMANS
 
   //Injecting the service into the component
   appService = inject(AppService);
 
   //Creating an object to access items in the service
-  currentStudent = this.appService.student;
+  currentStudent = this.appService.students;
 
   showList = false;
   //Function to toggle the button

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CurrencyConverterPipe implements PipeTransform {
 
-  //Gifty Hermans
+  //GIFTY HEMANS
 
   transform(
     value: number,

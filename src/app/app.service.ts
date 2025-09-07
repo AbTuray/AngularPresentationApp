@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { user } from './app.model';
+import { studentModel } from './app.model';
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +8,7 @@ import { user } from './app.model';
 export class AppService{
     //Gifty Hermans
     
-    student: user[] =[
+    students: studentModel[] =[
         {id:1, firstName: "Ab", lastName: "Ray", email: "stud1@mail.com" },
         {id:2, firstName: "Abdul", lastName: "Bangura", email: "stud2@mail.com" },
         {id:3, firstName: "Andy", lastName: "Mo", email: "stud3@mail.com" },
