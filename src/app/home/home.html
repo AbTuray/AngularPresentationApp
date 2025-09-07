@@ -14,3 +14,27 @@
         </div>
     </div>
 </div>
+<h2>Directives</h2> <br>
+            <button class="btn btn-primary" (click)="toggleList()">{{showList ? "Hide Student" : "Show Student"}}</button>
+            <br> <br>
+            <table *ngIf="showList" class="table table-striped table-brodered table-hover">
+                <thead>
+                    <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    </tr>
+                    
+                </thead>
+                <tbody *ngFor="let students of presentersList">
+                    <tr>
+                    <td>{{students.id}}</td>
+                    <td>{{students.firstName}}</td>
+                    <td>{{students.lastName}}</td>
+                    <td>{{students.email}}</td>
+                    </tr>
+                    
+                </tbody>
+
+            </table>

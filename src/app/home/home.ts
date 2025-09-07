@@ -1,5 +1,7 @@
 import { CommonModule, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AppService } from '../app.service';
+
 
 @Component({
   selector: 'app-home',
@@ -18,4 +20,15 @@ export class Home {
   toggleNames(){
     this.showPresenter = !this.showPresenter;
   }
+
+    appService = inject(AppService);
+
+    presentersList = this.appService.student;
+
+    showList = false;
+  //Function to toggle the button
+  toggleList(){
+    this.showList = !this.showList;
+  }
+  
 }
