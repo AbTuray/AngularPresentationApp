@@ -1,14 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { AppService } from '../app.service';
 import { CommonModule } from '@angular/common';
+import { CurrencyConverterPipe } from '../currency-converter-pipe';
 
 @Component({
   selector: 'app-directive-ex',
-  imports: [CommonModule],
+  imports: [CommonModule, CurrencyConverterPipe],
   templateUrl: './directive-ex.html',
   styleUrl: './directive-ex.css'
 })
 export class DirectiveEx {
+
   //Injecting the service into the component
   appService = inject(AppService);
 

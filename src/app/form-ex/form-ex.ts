@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './form-ex.css'
 })
 export class FormEx {
+  //Abdulai Turay
+
   // Model for the form
   user = {
     firstname: '',

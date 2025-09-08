@@ -13,6 +13,8 @@ export class SignalsEx {
 
   title = signal<string>("Using Signals");
 
+  //Abdulai Turay
+
   //Signal Values
   firstNumber = signal(0);
   secondNumber = signal(0);
@@ -61,6 +63,7 @@ export class SignalsEx {
   newSurname = signal('');
   newAge = signal<number | null>(null);
 
+  //Filter workers in the array
   filteredWorkers = computed(() => {
     return this.workers().filter(worker =>
       worker.name.includes(this.filterName()) &&
@@ -68,12 +71,12 @@ export class SignalsEx {
     );
   });
 
+ //Add workers inthe array
   addWorker() {
     if (
       this.newId() !== null && this.newName() && this.newSurname() && this.newAge() !== null
     ) {
-      this.workers.update(workers => [
-        ...workers,
+      this.workers.update(workers => [...workers,
         {
           id: this.newId()!,
           name: this.newName(),

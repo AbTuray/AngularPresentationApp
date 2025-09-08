@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './data-binding-ex.css'
 })
 export class DataBindingEx {
+  //Philip Jalloh
+
   //String Iinterpolation
   title1 = "String Interpolation"
 

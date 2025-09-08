@@ -6,6 +6,8 @@ import { user } from './app.model';
 })
 
 export class AppService{
+    //Gifty Hermans
+    
     student: user[] =[
         {id:1, firstName: "Ab", lastName: "Ray", email: "stud1@mail.com" },
         {id:2, firstName: "Abdul", lastName: "Bangura", email: "stud2@mail.com" },
@@ -16,10 +18,5 @@ export class AppService{
         {id:7, firstName: "Said", lastName: "Freaky", email: "stud7@mail.com" },
     ]
 
-    searchStudents(query: string): user[] {
-    return this.student.filter(s =>
-      s.firstName.toLowerCase().includes(query.toLowerCase()) ||
-      s.lastName.toLowerCase().includes(query.toLowerCase())
-    );
-  }
+    
 }

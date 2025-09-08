@@ -49,9 +49,9 @@
                 <tbody *ngFor="let worker of filteredWorkers()">
                     <tr>
                         <td>{{worker.id}}</td>
-                        <td>{{worker.name}}</td>
-                        <td>{{worker.surname}}</td>
-                        <td>{{worker.age}}</td>
+                        <td>{{worker.name | uppercase}}</td>
+                        <td>{{worker.surname | uppercase}}</td>
+                        <td>{{worker.age | number}}</td>
                         
                     </tr>
                 </tbody>

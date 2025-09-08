@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.css'
 })
 export class Home {
-  
+
   //Variables
   title = "Angular Presentation";
   showPresenter = false;
-  presenters = ["Gifty Hemans", "Philip Jalloh", "Abdulai Turay"];
+  presenters = ["Gifty Hermans", "Philip Jalloh", "Abdulai Turay"];
 
   //Function to Hide and Show Presenters
   toggleNames(){

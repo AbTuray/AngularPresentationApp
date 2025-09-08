@@ -6,6 +6,7 @@ import { FormEx } from './form-ex/form-ex';
 import { Home } from './home/home';
 
 export const routes: Routes = [
+    //Abdulai Turay
     {
         path: 'home',
         component: Home
