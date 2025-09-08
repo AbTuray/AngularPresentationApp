@@ -1,6 +1,7 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { AppService } from '../app.service';
+import { studentModel } from '../app.model';
 
 
 @Component({
@@ -22,16 +23,20 @@ export class Home {
     this.showPresenter = !this.showPresenter;
   }
 
-  //Gifty Heman
+  //Gifty Hemans
 
-  appService = inject(AppService);
-
-  presentersList = this.appService.students;
+  // appService = inject(AppService);
+  //presentersList = this.appService.students;
+  //presentersList: studentModel;
+  students: studentModel[];
+  constructor(private appService: AppService) {
+    this.students = this.appService.students;
+  }
 
   showList = false;
   //Function to toggle the button
   toggleList(){
     this.showList = !this.showList;
   }
-  
+
 }
