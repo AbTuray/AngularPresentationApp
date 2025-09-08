@@ -6,7 +6,7 @@ import { studentModel } from './app.model';
 })
 
 export class AppService{
-    //Gifty Hermans
+    //Gifty Hemans
     
     students: studentModel[] =[
         {id:1, firstName: "Ab", lastName: "Ray", email: "stud1@mail.com" },

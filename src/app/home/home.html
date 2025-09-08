@@ -3,38 +3,40 @@
         <div class="col-md-6 text-center">
             <h1>Welcome To Our {{title}}</h1>
 
-            <button class="btn btn-warning" (click)="toggleNames()">Presenters</button>
+            <button class="btn btn-warning" (click)="toggleNames()">Presenters</button> <br>
 
             <ul class="list-group mt-3" *ngIf="showPresenter">
                 <li class="list-group-item" *ngFor="let presenter of presenters">
                     {{presenter}}
                 </li>
-            </ul>
-
-        </div>
-    </div>
-</div>
-<h2>Directives</h2> <br>
-            <button class="btn btn-primary" (click)="toggleList()">{{showList ? "Hide Student" : "Show Student"}}</button>
+            </ul> <br>
+            <h6 class="text-primary text-uppercase">Using the service in the home component</h6> <br>
+            <button class="btn btn-primary" (click)="toggleList()">{{showList ? "Hide Student" : "Show
+                Student"}}</button>
             <br> <br>
             <table *ngIf="showList" class="table table-striped table-brodered table-hover">
                 <thead>
                     <tr>
-                    <th>Id</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
                     </tr>
-                    
+
                 </thead>
                 <tbody *ngFor="let students of presentersList">
                     <tr>
-                    <td>{{students.id}}</td>
-                    <td>{{students.firstName}}</td>
-                    <td>{{students.lastName}}</td>
-                    <td>{{students.email}}</td>
+                        <td>{{students.id}}</td>
+                        <td>{{students.firstName}}</td>
+                        <td>{{students.lastName}}</td>
+                        <td>{{students.email}}</td>
                     </tr>
-                    
+
                 </tbody>
 
             </table>
+
+
+        </div>
+    </div>
+</div>

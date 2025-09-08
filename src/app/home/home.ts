@@ -10,22 +10,25 @@ import { AppService } from '../app.service';
   styleUrl: './home.css'
 })
 export class Home {
+  //Abdulai Turay
 
   //Variables
   title = "Angular Presentation";
   showPresenter = false;
-  presenters = ["Gifty Hermans", "Philip Jalloh", "Abdulai Turay"];
+  presenters = ["Gifty Hemans", "Philip Jalloh", "Abdulai Turay"];
 
   //Function to Hide and Show Presenters
   toggleNames(){
     this.showPresenter = !this.showPresenter;
   }
 
-    appService = inject(AppService);
+  //Gifty Heman
 
-    presentersList = this.appService.students;
+  appService = inject(AppService);
 
-    showList = false;
+  presentersList = this.appService.students;
+
+  showList = false;
   //Function to toggle the button
   toggleList(){
     this.showList = !this.showList;
