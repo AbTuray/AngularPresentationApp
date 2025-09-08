@@ -11,9 +11,9 @@ export class DataBindingEx {
   //Philip Jalloh
 
   //String Iinterpolation
-  title1 = "String Interpolation"
+  title1 = "String Interpolation by Philo "
 
-  
+
   //Property Binding
   firstInput = "text"
   entered!: string;
@@ -35,6 +35,6 @@ export class DataBindingEx {
     return this.result --
   }
 
-  
+
 
 }
