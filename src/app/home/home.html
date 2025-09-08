@@ -4,12 +4,17 @@
             <h1>Welcome To Our {{title}}</h1>
 
             <button class="btn btn-warning" (click)="toggleNames()">Presenters</button> <br>
-
-            <ul class="list-group mt-3" *ngIf="showPresenter">
-                <li class="list-group-item" *ngFor="let presenter of presenters">
+                @if(showPresenter === false){
+                    <ul class="list-group mt-3"></ul>
+                }
+            
+                @for(presenter of presenters; track presenters){
+                    <li class="list-group-item">
                     {{presenter}}
                 </li>
-            </ul> <br>
+                }
+                
+            <br>
             <h6 class="text-primary text-uppercase">Using the service in the home component</h6> <br>
             <button class="btn btn-primary" (click)="toggleList()">{{showList ? "Hide Student" : "Show
                 Student"}}</button>
