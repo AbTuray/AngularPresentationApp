@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding-ex',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './data-binding-ex.html',
   styleUrl: './data-binding-ex.css'
@@ -14,6 +15,10 @@ export class DataBindingEx {
   title1 = "String Interpolation by Philo "
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   //Property Binding
   firstInput = "text"
   entered!: string;

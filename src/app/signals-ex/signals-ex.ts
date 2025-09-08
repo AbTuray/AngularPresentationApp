@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-signals-ex',
+  standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './signals-ex.html',
   styleUrl: './signals-ex.css'
@@ -71,7 +72,7 @@ export class SignalsEx {
     );
   });
 
- //Add workers inthe array
+ //Add workers in the array
   addWorker() {
     if (
       this.newId() !== null && this.newName() && this.newSurname() && this.newAge() !== null

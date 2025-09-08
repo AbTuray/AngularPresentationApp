@@ -5,6 +5,7 @@ import { CurrencyConverterPipe } from '../currency-converter-pipe';
 
 @Component({
   selector: 'app-directive-ex',
+  standalone: true,
   imports: [CommonModule, CurrencyConverterPipe],
   templateUrl: './directive-ex.html',
   styleUrl: './directive-ex.css'
@@ -33,7 +34,7 @@ export class DirectiveEx {
     "text-danger": this.haserror,
     "text-special": this.isSpecial
   };
-  
+
   highlightColor = "orange"
   titleStyle ={
     color: "blue",

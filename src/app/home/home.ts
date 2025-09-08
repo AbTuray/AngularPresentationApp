@@ -6,6 +6,7 @@ import { studentModel } from '../app.model';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [CommonModule, NgIf],
   templateUrl: './home.html',
   styleUrl: './home.css'
